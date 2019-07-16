@@ -6,12 +6,12 @@ selection, and repetition. You've learned how to break complicated programs down
 functions. That's great, but to create modern programs you need to master some additional skills and concepts. These 
 additional skills and concepts are what object-oriented programming give us.
 
-You will notice that I am using the term "sprint 1" to describe our first set of course material and activities. The 
+You will notice that I often use the term "sprint 1" to describe our first set of course material and activities. The 
 sprint term is comes from Scrum development process. For now, it's enough to know that "sprints" are part of Scrum which 
 is the most popular Agile development process, and that our sprint 1 activities are expected to take 7 to 10 hours of 
 effort to complete. 
 
-Let's start with what we hope to learn in sprint 1. By the end of the sprint we will be able to:
+Let's start with what we hope to learn in sprint 1. By the end of sprint 1 we will be able to:
 - Access course material utilizing Blackboard and the GitHub
 - Utilize command line and graphical tools to navigate your computer OS and local file system
 - Create, edit, and update source code in a text editor
@@ -20,7 +20,7 @@ Let's start with what we hope to learn in sprint 1. By the end of the sprint we 
 
 Below is our sprint 1 activities list. Although you are welcome to pursue the activities in any order you prefer, they 
 are listed them in the order I think will be the most beneficial for you to work through the topics. The anticipated 
-time commitment for each item is 20 to 40 minutes unless otherwise noted.
+time commitment for each item is 20 to 40 minutes of focused time unless otherwise noted.
 1. If you don't already have a GitHub account, set up a GitHub account utilizing the Student Developer Pack/Plan
     [[link]](https://help.github.com/en/articles/applying-for-a-student-developer-pack)
 1. If you are not familiar with navigating your computer OS and file system utilizing the command line, you will need 
@@ -42,13 +42,12 @@ time commitment for each item is 20 to 40 minutes unless otherwise noted.
     [[link]](https://www.oreilly.com/library/view/temporary-access/) 
 1. Within Safari Books Online execute searches for Git, GitHub, and Java and review the results of each search
 1. Accept your sprint 1 Activities List and Programming Assignment and clone them to your local computer
-1. Review this Activities List and your sprint 1 Programming Assignment(s) 
 1. Install the Java SDK and associated command line tools 
     [[video]](https://mediaatoz.blob.core.windows.net/environment-configuration/java-jdk-windows10-setup.mp4)
+1. Review Quiz 1 and Programming Assignment 1
 1. Complete "Object-Oriented Programming Concepts" 
     [[video]](http://mediaatoz.blob.core.windows.net/object-oriented-programming/concepts-and-practices.mp4) 
     [[slides]](https://mediaatoz.blob.core.windows.net/object-oriented-programming/concepts-and-practices-slides-only.pptx)
-
 1. Review "Introduction to Scrum in 7 Minutes" 
     [[video]](https://www.youtube.com/watch?v=9TycLR0TqFA)
 1. If you do not already have access to a current version of Microsoft Office, install the current Microsoft 
