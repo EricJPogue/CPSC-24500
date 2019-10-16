@@ -56,7 +56,6 @@ class XAndOTile extends JPanel implements MouseListener {
      public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-
         System.out.println(this);
 
         if (drawFace) {
