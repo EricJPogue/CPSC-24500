@@ -1,14 +1,846 @@
-<!doctype html>
-<html lang="en">
-<!--
-    Author: Eric Pogue
--->
+<!DOCTYPE html>
+<html lang=en>
 <head>
-    <meta charset="UTF-8">
-    <title>cpsc-24500</title>
+<title>Object-Oriented Programming</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* General style attributes */
+body {font-family: Arial;}
+em {font-weight:bold}
+a:hover {background-color: #caa612;}
+p {margin-top:10px; margin-bottom: 0;}
+ul {margin-top: 0px;}
+ol {margin-top: 0px;}
+li {margin-top: 10px;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 1048px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  width: 1024px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table tr:nth-child(even) {
+  background-color: #eee;
+}
+table tr:nth-child(odd) {
+ background-color: #fff;
+}
+table th {
+  background-color: #707070;
+  color: white;
+}
+</style>
 </head>
+
 <body>
-    <h1>cpsc-24500</h1>
-    <h2>version 1.0</h2>
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'calendar')" id="idCalendar">Calendar</button>  
+  <button class="tablinks" onclick="openTab(event, 'sprint-01')" id="idSprint1">Sprint 1</button>
+  <button class="tablinks" onclick="openTab(event, 'sprint-02')" id="idSprint2">Sprint 2</button>
+  <button class="tablinks" onclick="openTab(event, 'sprint-03')" id="idSprint3">Sprint 3</button>
+  <button class="tablinks" onclick="openTab(event, 'sprint-04')" id="idSprint4">Sprint 4</button>
+  <button class="tablinks" onclick="openTab(event, 'sprint-05')" id="idSprint5">Sprint 5</button>
+  <button class="tablinks" onclick="openTab(event, 'sprint-06')" id="idSprint6">Sprint 6</button>
+  <button class="tablinks" onclick="openTab(event, 'sprint-07')" id="idSprint7">Sprint 7</button>
+  <button class="tablinks" onclick="openTab(event, 'sprint-08')" id="idSprint8">Sprint 8</button>
+  <button class="tablinks" onclick="openTab(event, 'credits')">Credits</button>
+</div>
+
+<div id="sprint-01" class="tabcontent">
+  <h3>Object-Oriented Programming</h3>
+  <h3>Sprint 1: Getting Started, Object-Oriented Programming Concepts, and Tools of the Trade</h3>
+
+  <p><em>Welcome to Object-Oriented Programming!</em> By this point in your programming journey I'm sure that you are confident
+  in writing basic software programs. You've learned about structured programming techniques like sequence, selection,
+  and repetition. You've learned how to break complicated programs down into more manageable pieces by using functions.
+  That's great, but to create modern programs you need to master some additional skills. These additional skills are
+  what object-oriented programming give us.</p>
+
+  <p>You have likely noticed that I am using the term “sprint 1” to describe our first set of course activities and
+  assignments. Sprints are part of the Scrum development process. The term is used to describe a unit of work which will
+  be delivered in a given amount of time. We will be learning more about sprints and Scrum in the coming days. For now
+  it is sufficient to know that our sprint 1 activities listed below are expected to take approximately 20 hours of
+  focused effort to complete.</p>
+
+  <p>Let's start with what we hope to learn in sprint 1. By the end of sprint 1 we will be able to:</p>
+  <ul style="list-style-type:square">
+    <li>Identify and understand key object-oriented programming concepts and practices</li>
+    <li>Identify, define, and discuss object-oriented programming patterns</li>
+    <li>Compile and execute basic Java applications utilizing Java command line tools</li>
+    <li>Utilize command line and graphical tools to navigate our computer operating system and local file system</li>
+    <li>Create, edit, and update source code in a text editor</li>
+    <li>Manage source code utilizing the GitHub and the Git command line client</li>
+    <li>Understand basic Scrum development techniques</li>
+  </ul>
+
+  <p>Below is our sprint 1 activities list. Although you are welcome to pursue the activities in any order, they are
+  listed in the order I think will be the most beneficial for you to work through the topics. Each item is expected to
+  take 20 to 40 minutes of focused time unless otherwise noted. Highlighted activities are
+  <em>directly</em> related to graded assignments.</p>
+  <ol>
+    <li>Review course syllabus
+      <a href="https://cpsc-24500.azurewebsites.net/cpsc-24500-2019-08-fall-003-syllabus.pdf"
+      target="_blank">[pdf]</a></li>
+    <li><em>Review Programming Assignment 1, Quiz 1, and Discussion Board 1</em></li>
+    <li>Complete “Object-Oriented Programming Concepts and Practices”
+      <a href="http://mediaatoz.blob.core.windows.net/object-oriented-programming/concepts-and-practices.mp4">
+      [video]</a>
+      <a
+      href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/concepts-and-practices-slides-only.pptx">
+      [slides]</a> ~1 hour</li>
+    <li><em>Consistently work Programming Assignment 1 and Quiz 1 throughout the sprint ~6 hours</em></li>
+    <li>Install or update MS Windows PowerShell if you are utilizing MS Windows
+      <a href="http://mediaatoz.blob.core.windows.net/environment-configuration/powershell-windows10-setup.mp4">
+      [video]</a></li>
+    <li>Review navigation of your computer local file system utilizing MS Windows PowerShell, MS Windows command prompt,
+    MacOS terminal, or your preferred Linux shell</li>
+    <li>Install and verify the Java SDK and associated command line tools
+      <a href="https://mediaatoz.blob.core.windows.net/environment-configuration/java-jdk-windows10-setup.mp4">
+      [video]</a></li>
+    <li><em>Create your initial Discussion Board 1 post by the middle of the sprint</em></li>
+    <li>Review “Introduction to Scrum in 7 Minutes”
+      <a href="https://www.youtube.com/watch?v=9TycLR0TqFA">[video]</a></li>
+    <li>Install the Microsoft Visual Studio Code text editor and the Google Chrome web browser
+      <a href="https://mediaatoz.blob.core.windows.net/environment-configuration/mscode-and-chrome-windows10-setup.mp4">
+      [video]</a>
+      <a href="https://www.google.com/chrome/" target="_blank">[chrome]</a>
+      <a href="https://code.visualstudio.com/">[code]</a></li>
+    <li>Complete the Java “Hello World” tutorial. As in all tutorials, you should follow along and complete the steps
+    yourself. As you go through the tutorial, you should make the resulting application uniquely your own by adding
+    standard comments at the top application (i.e. your name, class, etc.), changing the names of variables, adding
+    small features, etc. Finally, be sure to save your unique creation as I will often be asking you to submit it as
+    part of your programming assignment. 
+      <a href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/java-hello-world.mp4"
+      target="_blank">[video]</a></li>
+    <li>If you don’t already have a GitHub account, set up a GitHub account utilizing the Student Developer Pack
+      <a href="https://help.github.com/en/articles/applying-for-a-student-developer-pack">[link]</a></li>
+    <li>Install the Git command line client
+      <a href="https://mediaatoz.blob.core.windows.net/environment-configuration/git-installation-on-windows-10.mp4">
+      [video]</a>
+      <a href="https://git-scm.com/">[link]</a></li>
+    <li>Utilize your GitHub account and Git client to:
+    <ul style="list-style-type:square">
+      <li>Complete the “An Intro to Git and GitHub for Beginners” tutorial from the GitHub website
+          <a href="https://guides.github.com/activities/hello-world/" target="_blank">[link]</a></li>
+      <li>Complete the “An Intro to Git and GitHub for Beginners” tutorial from HubSpot 
+          <a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners">[link]</a></li>
+      <li>Review the “Git Handbook” guide
+          <a href="https://guides.github.com/introduction/git-handbook/">[link]</a></li>
+    </ul></li>
+    <li>Complete “Object-Oriented Programming Patterns”
+      <a href="http://mediaatoz.blob.core.windows.net/object-oriented-programming/patterns.mp4">[video]</a>
+      <a href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/patterns-slides-only.pptx">
+      [slides]</a></li>
+    <li><em>Complete Discussion Board 1 by responding to at least one of your classmates' posts</em></li>
+    <li><em>Complete and submit Programming Assignment 1 and Quiz 1</em></li>
+</ol>
+<p>Feel free to post a note in our class forum or to send me an email you have questions.</p> 
+<br>
+<p>Additional references:</p>
+<ul style="list-style-type:square">
+    <li>Sprint 1 recorded Lecture/Discussion session from a previous (2019) online Object-Oriented Programming class
+            <a
+            href="https://24500lt1.blob.core.windows.net/lecture-recordings/cpsc-24500-2019-01-spring-lt1_2019-01-16.mp4"
+            target="_blank">[link]</a></li> 
+    <li>Git/GitHub Cheat Sheet
+        <a href="https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf"
+        target="_blank">[link]</a></li> 
+</ul> 
+</div>
+
+<div id="sprint-02" class="tabcontent">
+  <h3>Object-Oriented Programming</h3>
+  <h3>Sprint 2: Patterns, Principles, and Java Programming</h3>
+
+  <p><em>Welcome to sprint 2.</em> We covered a lot of material in sprint 1. However, we didn't get a
+  chance to write much code. This sprint get your Java compilers out. We are going to start practicing some of the
+  concepts we learned. Note that sprint 2 and all subsequent sprints are approximately twice as long as sprint 1
+  and are expected to take approximately 20 hours of focused effort to complete.</p>
+
+  <p>By the end of sprint 2 we will be able to:</p>
+  <ul style="list-style-type:square">
+      <li>Identify, define, and discuss OOP Principles</li>
+      <li>Create, modify, compile, and execute OOP based Java applications</li>
+      <li>Manage and submit source code utilizing the GitHub and the Git command line client</li>
+      <li>Utilize JSON to represent program data</li>
+  </ul>
+
+  <p>Below is the list of activities that we will need to complete this sprint. Once again you are welcome to
+  pursue the activities in any order you prefer. However, they are listed in the order I think will be the most
+  beneficial for you to work through the topics. The time commitment for each line item is generally 20 to 40
+  minutes unless otherwise noted.</p>
+  <ol>
+      <li>Review Programming Assignment 2, Quiz 2, and Discussion Board 2</li>
+      <li>Analyze and commit to adopting the “How to Be a Success Programmer” suggestions that you feel are the
+      most important 
+          <a href="https://cpsc-24500.azurewebsites.net/successful-programmer.html">[link]</a></li>
+      <li>Sign up for Safari Books Online which is available to you free through Lewis University
+          <a href="https://www.oreilly.com/library/view/temporary-access/">[link]</a></li>
+      <li>Within Safari Books Online execute searches for Object-Oriented Programming, OOP, Git, GitHub, and Java
+      and review the results of each search</li>
+      <li>Review the answers to Quiz 1 as many of the topics in Quiz 1 will come up in future so it is important
+      that you understand the concepts question</li>               
+      <li>Complete the Java "Shapes Step 1" tutorial. As will all tutorials, be sure to follow along and complete
+      the steps yourself, make the resulting application uniquely your own, and to be ready to submit your
+      personalized version of the application as part of an assignment  
+          <a href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/java-shapes-step1.mp4"
+          target="_blank">[video]</a></li> 
+      <li>Complete the Java “Shapes Step 2” tutorial
+          <a href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/java-shapes-step2.mp4"
+          target="_blank">[video]</a></li>
+      <li>Complete your initial Discussion Board (DB) post by the middle of the sprint</li>
+      <li>Complete “Object-Oriented Programming Principles”
+          <a href="http://mediaatoz.blob.core.windows.net/object-oriented-programming/principles.mp4">[video]</a>
+          <a
+          href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/principles-slides-only.pptx">[slides]</a></li>
+      <li>Read and Understand the article “What is JSON? JavaScript Object Notation explained” 
+            <a
+            href="https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html"
+            target="_blank">[link]</a></li> 
+      <li>Read and Understand “JSON Introduction” from W3C 
+            <a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank">[link]</a></li> 
+      <li>If you do not already have access to a current version of Microsoft Office, install the current
+      Microsoft PowerPoint (PowerPoint Mobile) and Word (Word Mobile) viewers
+      <a
+      href="http://mediaatoz.blob.core.windows.net/environment-configuration/powerpoint-mobile-viewer-installation.mp4">[video]</a>
+      <a
+      href="https://www.microsoft.com/en-us/p/powerpoint-mobile/9wzdncrfjb5q?activetab=pivot%3Aoverviewtab">[link]</a></li>
+  </ol> 
+
+  <p>Once again, be sure to take some time and reward yourself for your efforts. Get a coffee and spend some time
+  reflecting on what you've accomplished. It is important to take a little time to enjoy the moment. </p>
+
+  <p>Feel free to post a note in our Class Forum or to send me an email you have questions.</p><br>
+
+  <p>Additional external references are provided below:</p>
+  <ul style="list-style-type:square">
+      <li>Git/GitHub Cheat Sheet  
+          <a href="https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf"
+          target="_blank">[link]</a></li> 
+      <li>Sprint 2 Recorded Lecture/Discussion session from a previous online Object-Oriented Programming class
+          <a
+          href="https://24500lt1.blob.core.windows.net/lecture-recordings/cpsc-24500-2019-01-spring-lt1_2019-01-23.mp4"
+          target="_blank">[link]</a></li> 
+      <li>Sprint 1 Activities List <a href="sprint-01.html">[link]</a></li>
+  </ul> 
+</div>
+
+<div id="sprint-03" class="tabcontent">
+  <h3>Sprint 3</h3>
+        <h2>Object-Oriented Programming</h2>
+        <p><strong>Sprint 3: Graphical User Interfaces and FaceDraw</strong></p>
+        <br>
+
+        <p><b><i>Welcome to Sprint 3.</i></b> We have covered a lot in the first two sprints. Much of it was preparing
+        us for our first substantial programming assignment. I believe we are ready to apply what we have learned to our
+        FaceDraw project. Be sure to get an early start on the project and stay focused. You will note that there are
+        fewer items on our activities list this week. That is because you will need to focus your time and energy on
+        FaceDraw.</p>
+        <p>By the end of this sprint we will be able to:</p>
+        <ul style="list-style-type:square">
+            <li>Develop a moderately sophisticated graphical Java application (FaceDraw)</li>
+            <li>Comfortably utilize our Java development environment</li>
+            <li>Utilize source code management and Git/GitHub</li>
+            <li>Effectively compile, debug, submit, update, and manage Java application source code</li>
+        </ul>
+        <p>As you would expect, our activities list for this sprint (below) is laser focused on helping us achieve the
+        above Learning Objectives. Once again I have attempted to list this items in the order that I think will be most
+        beneficial for you to complete them.</p> 
+        <ol>
+            <li>Review and start working on Programming Assignment 3 - FaceDraw and Quiz 3</li>
+            <li>Complete "Graphical User Interfaces (GUI) in Java" lesson 
+                <a href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/java-gui-programming.mp4"
+                target="_blank">[video]</a></li>
+            <li>Review the answers from Quiz 2</li>
+            <li>Take one last look at "How to Be a Success Programmer" suggestions and intentionally decide if there is
+            something you are going to change now that the programming assignments are becoming more challenging. 
+                <a href="https://cpsc-24500.azurewebsites.net/successful-programmer.html" target="_blank">[link]</a></li>         
+            <li>Complete the FaceDrawLite tutorial
+                <a href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/java-facedraw-lite.mp4"
+                target="_blank">[video]</a> ~2 hours</li>
+            <li>Complete your initial Discussion Board (DB) post by the middle of the sprint</li>
+            <li>FaceDraw, FaceDraw, FaceDraw ~8 to 12 hours</li>
+        </ol> 
+
+        <p>Take a few minutes to reflect on how much you have learned by completing the FaceDraw project. It's likely a
+        significant step up from anything you have programmed in the past. Well done.</p>
+
+        <p>Feel free to post a note in our Class Forum or to send me an email you have questions.</p><br>
+        <p>Additional references:</p>
+        <ul style="list-style-type:square">
+            <li>Git/GitHub Cheat Sheet      
+                <a href="https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf"
+                target="_blank">[link]</a></li> 
+                <li>Sprint 3 Recorded Lecture/Discussion session from the previous (2019) accelerated online
+                Object-Oriented Programming class
+                    <a href="https://24500lt1.blob.core.windows.net/lecture-recordings/cpsc-24500-2019-01-spring-lt1_2019-01-30.mp4"
+                    target="_blank">[link]</a></li>
+            <li>Sprint 2 Activities List <a href="sprint-02.html">[link]</a></li>
+        </ul> 
+</div>
+
+<div id="sprint-04" class="tabcontent">
+  <h3>Sprint 4</h3>
+        <h2>Object-Oriented Programming</h2>
+        <p><strong>Sprint 4: Interactive User Interfaces and Mosaic</strong></p>
+        <br>
+
+        <p><b><i>Welcome to sprint 4.</i></b> We have covered a lot of material in the first three sprints. I suspect
+        that the FaceDraw programming assignment was challenging. As we near the halfway point of our course, we will
+        continue to focus on delivering real software each sprint. This week we will continue with enhancing our
+        programming skills by learning how to develop <b><i>interactive</i></b> applications while also learning how to
+        read and write files.</p>
+        <p>By the end of this sprint we will be able to:</p>
+            <ul style="list-style-type:square">
+                <li>Develop <b><i>interactive</i></b> graphical Java applications utilizing Listeners</li>
+                <li>Describe how to develop <b><i>interactive</i></b> command-line Java applications utilizing
+                Scanner</li>
+                <li>Develop Java applications that read and write files including JSON files</li>
+                <li>Understand JavaDoc and how it can create self-documenting source code</li>
+            </ul>
+        <p>Please let me know if you need assistance. If you struggled with FaceDraw, it might help if we had a chance
+        to sit down and talk through how we can get things back on track for the remainder of the course. I am here to
+        help.</p>
+        <p>Our activities list for this sprint is provided below:</p> 
+        <ol>
+            <li>Review and start to work on Programming Assignment 4 Mosaic and Quiz 4</li>
+            <li>Complete the ActionListenerPlus tutorial 
+                    <a
+                    href="https://mediaatoz.azurewebsites.net/display-video.html?video-url=https://mediaatoz.blob.core.windows.net/cpsc-24500-2018-sp-001/java-action-listeners.mp4"
+                    target="_blank">[video]</a></li>
+            <li>Complete the MosaicLite tutorial
+                <a href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/java-mosaic-lite.mp4"
+                target="_blank">[video]</a> ~1.5 hours</li>
+            <li>Complete Mosaic (PA4) ~10 hours</li>
+            <li>Review the answers from last week's programming assignment and quiz. </li>
+            <li><em>Complete your initial Discussion Board (DB) post by the middle of the sprint</em></li>
+            <li>Complete OvalDraw Plus Menus and Colors 
+                <a href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/java-ovaldraw-plus.mp4"
+                target="_blank">[video]</a> ~1.5 hours.</li>
+            <li>Review the Java file documentation provide by Oracle 
+                <a href="https://docs.oracle.com/javase/7/docs/api/java/io/package-summary.html"
+                target="_blank">[link]</a></li>
+            <li>Review the related Java file tutorials provided my Oracle 
+                    <a href="https://docs.oracle.com/javase/tutorial/essential/io/" target="_blank">[link]</a>
+                    and complete and complete one of the tutorials.</li>
+            <li>Complete the BMI with JavaDoc and Scanner (keyboard input) tutorial 
+                <a
+                href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/bmi-calculator-add-javadoc-and-keyboard-input.mp4"
+                target="_blank">[video]</a>.
+            <li><em>Complete all remaining items including submitting Programming Assignment 4, Quiz 4, and responding
+            to one of your classmate's Discussion Board posts by the end of the sprint</em></li>
+        </ol> 
+        <p>Feel free to post something in our "Class Forum" discussion board forum or to send me an email you have
+        questions. Give yourself a special reward at the end of the sprint. You have made it to the halfway point!</p><br>
+        <p>Additional references:</p>
+        <ul style="list-style-type:square">
+            <li>Git/GitHub Cheat Sheet  
+                <a href="https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf"
+                target="_blank">[link]</a></li> 
+            <li>Sprint 4 Recorded Lecture/Discussion session from an online Object-Oriented Programming class
+                <a
+                href="https://24500lt1.blob.core.windows.net/lecture-recordings/cpsc-24500-2019-01-spring-lt1_2019-02-06.mp4"
+                target="_blank">[link]</a></li> 
+            <li>Sprint 3 Activities List <a href="sprint-03.html">[link]</a></li>
+        </ul> 
+</div>
+
+<div id="sprint-05" class="tabcontent">
+  <h3>Sprint 5</h3>
+        <h2>Object-Oriented Programming</h2>
+        <p><strong>Sprint 5: Network Programming and The Cloud</strong></p>
+        <br>
+
+        <p>Wow! Sprint 5. How did that come so fast? I must say that I am impressed. This is a challenging class and
+        it's obvious that you are working hard and delivering assignments that you are proud of delivering. Well done!
+        </p>
+        <p>By the end of this sprint we will be able to:</p>
+        <ul style="list-style-type:square">
+            <li>Develop your first network and distributed Java application</li>
+            <li>Create a web service (website with JSON) utilizing the MS Azure cloud platform</li>
+            <li>Develop intermediate command line Java applications that span multiple Java files</li>
+            <li>Understand Software Testing and the basics of Software Development Life Cycles</li>
+            <li>Describe multiple Object-Oriented Languages and Platforms</li>
+        </ul>
+        <p>This sprint you will likely notice two changes. First, we will be taking a bit of a break from Java graphics
+        programming and instead will focus our energy on Internet &amp; distributed programming and JSON. I think you
+        will enjoy the change. But don't worry, we will get back to Java graphics programming soon enough. </P>
+        <p>The second change you will see starting this sprint I will be looking for you to do more of your own research
+        and decision making on assignments. For example, you will see topics this week relating to setting up Microsoft
+        Azure static websites, accessing JSON files from Java, and developing more complex Java command line
+        applications. In each of these cases I will be giving you some direction but will be looking for you to do the
+        research and make your own choices on how you would like to implement solutions. </p>
+        <p>Our activities list for this sprint include:</p>
+        <ol>
+            <li>Review and start to work on Programming Assignment 5 and Quiz 5. </li>
+            <li>Setup a Microsoft Azure account with a Microsoft Imagine educational subscription 
+                    <a href="https://imagine.microsoft.com/en-us" target="_blank">[link]</a>
+                Or optionally, set up your account with a free trial subscription
+                    <a href="https://azure.microsoft.com/en-us/free/" target="_blank">[link]</a>. Although your free
+                    trial will last 30 days, you will need to provide a credit card. You will also want to watch what
+                    types of resources you access on your Azure account so that when you convert the account to
+                    "pay-as-you-go", you will not experience any significant charges. For this class I will be guiding
+                    you toward free or very low-cost cloud resources.</li>
+            <li>Review "What is JSON? JavaScript Object Notation explained"
+                    <a
+                    href="https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html"
+                    target="_blank">[link]</a>
+                    and “JSON Introduction” from W3C
+                    <a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank">[link]</a> 
+            <li>Create a free static Microsoft Azure Website and deploy an index.html Landing Page to the site using one
+            of the methods demonstrated below. Test your website and make certain that your index.html Landing Page is
+            working as expected. ~2 hours
+                <ul style="list-style-type:square">
+                    <li>Review "Website Creation With GitHub and Microsoft Azure" (highly recommended) 
+                            <a
+                            href="https://24500lt1.blob.core.windows.net/lecture-recordings/website-creation-with-git-and-azure.mp4"
+                            target="_blank">[video]</a></li>
+                    <li>Review "Git Deployment to Microsoft Azure"
+                            <a
+                            href="https://mediaatoz.blob.core.windows.net/environment-configuration/git-deployment-to-azure.mp4"
+                            target="_blank">[video]</a></li>
+                    <li>Review "Eric's Azure Static Website" with FTP tutorial 
+                        <a
+                        href="https://mediaatoz.blob.core.windows.net/web-and-distributed-programming/my-first-website-with-ftp.mp4"
+                        target="_blank">[video]</a></li>
+                    <li>Review "Create a static HTML web application in Azure" tutorial 
+                        <a href="https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-html"
+                        target="_blank">[video]</a></li>
+                </ul>
+            </li>
+            <li>Repeat the step above and create another static website that you will leave in place for the
+            duration of this class. We will be utilizing this site to deploy JSON files for us to access</li>
+            <li><em>Consistently work on the SwissArmyKnife assignment (PA5) ~8 hours</em></li>
+            <li><em>Complete "DB5: Personal Information JSON Files" which includes defining and creating a JSON file for
+            yourself and posting it in our DB5 forum by the middle of the sprint</em></li>
+            <li>Review the "OvalDraw Plus With Clicking and Dragging" application located in the ShapeDrawPlus
+            folder in our course materials. You should compile, run, and test the functionality of the application. Then
+            you will need to complete a detailed source code review. Finally, you will create a UML diagram of the
+            primary classes and relationships utilized in creating the application. ~2-3 hours</li>
+            <li>Review Testing 
+                <a href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/java-testing.mp4"
+                target="_blank">[video]</a></li>
+            <li>Review Object-Oriented Programming Languages and Platforms 
+                <a
+                href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/languages-and-platforms.mp4"
+                target="_blank">[video]</a> ~1 hour</li>
+            <li><em>Complete PA 5 and all activity list items by the end of the sprint</em></li>
+        </ol>
+        <p>Feel free to post something in our "Class Forum" discussion board forum or to send me an email you have any
+        questions. Also, be watching for Announcements through Blackboard during the week as I am sure that something
+        will come up.</p><br>
+        <p>Additional references:</p>
+        <ul style="list-style-type:square">
+            <li>Sprint 5 Recorded Lecture/Discussion session from a previous online Object-Oriented Programming class
+                <a
+                href="https://24500lt1.blob.core.windows.net/lecture-recordings/cpsc-24500-2019-01-spring-lt1_2019-02-13.mp4"
+                target="_blank">[link]</a></li>      
+            <li>Git/GitHub Cheat Sheet  
+                <a href="https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf"
+                target="_blank">[link]</a></li> 
+
+        </ul> 
+</div>
+
+<div id="sprint-06" class="tabcontent">
+  <h3>Sprint 6</h3>
+        <h2>Object-Oriented Programming</h2>
+        <p><em>Sprint 6: Multithreading and Application Programming Interfaces</em></p>
+        <br>
+        <p>Sprint 6! This sprint offers a mix of the old and the new. Some things like hosting JSON files on our Azure
+        websites and enhancing our SwissArmyKnife application will be additions to what we have already learned. On the
+        other hand, learning how to write multi-threaded Java applications will likely prove to be challenging.</p>
+            <p>By the end of this sprint we will be able to:</p>
+            <ul style="list-style-type:square">
+                <li>Develop our first multi-threaded Java application</li>
+                <li>Create / update a web service by hosting JSON files on MS Azure</li>
+                <li>Enhance intermediate command line Java applications that span multiple Java files</li>
+                <li>Create an automated (api level) Java test client
+            </ul>
+        <p>You will notice this sprint that it looks like our activities list is shrinking. Don't let that fool you. At
+        this point in the class many of our activities are naturally migrating from our activities list to our
+        assignments. This is because you are becoming more capable of researching and figuring out how to implement new
+        features. </p>
+        <p>Our activities list for this sprint includes:</p>
+        <ol>
+            <li><em>Review Discussion Board 6, Programming Assignment 6, and Quiz 6</em></li>
+            <li>Complete "Website Creation With GitHub and Microsoft Azure" Tutorial 
+                    <a
+                    href="https://mediaatoz.blob.core.windows.net/environment-configuration/github-deployment-to-azure.mp4"
+                    target="_blank">[video]</a></li>
+            <li>Complete "Personal Information JSON Files" Tutorial 
+                    <a
+                    href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/personal-info-json-to-azure.mp4"
+                    target="_blank">[video]</a></li>
+            <li><em>Consistently work on the SwissArmyKnife v2 assignment (PA6) and Quiz 6 throughout the sprint ~10 hours</em></li>
+            <li><em>Complete your initial Discussion Board post by the middle of the sprint</em></li>
+            <li>Create and/or update your JSON files on your MS Azure website by the middle of the sprint to reflect the
+            requirements identified in our sprint 6 assignments</li>
+            <li>Review "Performance and Multithreading" 
+                <a
+                href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/performance-and-multithreaded-programming.mp4"
+                target="_blank">[video]</a></li>
+            <li>Complete "SleepFast" Tutorial
+                    <a href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/java-sleep-fast.mp4"
+                    target="_blank">[video]</a></li>
+            <li>Review Object-Oriented Programming Languages and Platforms
+                <a
+                href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/languages-and-platforms.mp4"
+                target="_blank">[video]</a></li>
+            <li><em>Complete all activity list items and assignments by the end of the sprint</em></li>
+        </ol> 
+        <p>Feel free to post something in our discussion board forum or to send me an email you have questions.</p> 
+        <br>
+        <p>Additional references:</p>
+        <ul style="list-style-type:square">
+            <li>Sprint 6 recorded Lecture/Discussion session from a previous online Object-Oriented Programming class
+                <a
+                href="https://24500lt1.blob.core.windows.net/lecture-recordings/cpsc-24500-2019-01-spring-lt1_2019-02-20.mp4"
+                target="_blank">[link]</a></li> 
+            <li>Git/GitHub Cheat Sheet  
+                <a href="https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf"
+                target="_blank">[link]</a></li> 
+        </ul> 
+</div>
+
+<div id="sprint-07" class="tabcontent">
+  <h3>Sprint 7</h3>
+        <h2>Object-Oriented Programming</h2>
+        <p><em>Sprint 7: Model-View-Controller and Application Architecture</em></p>
+        <br>
+        <p><em>Welcome to sprint 7.</em> How time flies. We have two separate programming assignment this sprint. The
+        first assignment (PA7) is Thunderbird. We will be completing the Thunderbird application by the middle of the
+        sprint. Thunderbird is also different than previous assignments in that we will be enhancing an existing
+        application rather than creating a new application from scratch. This is more like what you could expect in an
+        entry level professional programming position. I think you will enjoy it.</p>
+        <p>The second half of the sprint will be entirely focused on completing version 1 of your final project. 
+        which will be submitted by the end of the sprint in programming assignment 7b.</p>
+        <ul style="list-style-type:square">
+            <li>Develop and enhance intermediate level graphical, distributed, multi-threaded Java applications</li>
+            <li>Create View and Model classes that conform to the model-view-controller pattern</li>
+            <li>Begin to understand Application Architecture and its relationship to Object-Oriented Programming</li>
+        </ul>
+        <p>Our activities list for this sprint includes:</p>
+        <ol>
+            <li><em>Review Programming Assignment (PA) 7 Thunderbird, Programming Assignment 7b Final Project v1, Quiz 7, 
+                and Discuss Board (DB) 7</em></li>
+            <li>Complete the ThunderbirdLite tutorial
+                <a href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/java-thunderbird-lite.mp4"
+                target="_blank">[video]</a> using the ThunderbirdLite source code from our "Examples" repository as needed</li>
+            <li style="color:red"><em>Complete Programming Assignment (PA) 7 Thunderbird by the middle of the sprint</em></li>
+            <li><em>Complete your initial Discussion Board post by the middle of the sprint~6 hours</em></li>
+            <li>Continue to monitor and update your DB6 thread from last sprint and update your JSON contact files as 
+                necessary</li>
+            <li><em>Consistently work on the version 1 of your Final Project throughout the sprint ~6 hours</em></li>
+            <li>Complete "Application Architectures, Object-Oriented Programming, and Databases - Part 1"
+                <a
+                href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/application-architecture-part1.mp4"
+                target="_blank">[video]</a></li>
+            <li><em>Complete all activity list items and assignments including PA7b Final Project v1, Quiz 7, and discussion board 7
+            by the end of the sprint</em></li>
+        </ol> 
+        <p>Feel free to post a note in our discussion board forum or to send me an email you have questions.</p> 
+        <br>
+        <p>Additional references:</p>
+        <ul style="list-style-type:square">
+            <li>Sprint 7 recorded Lecture/Discussion session from a previous online Object-Oriented Programming class
+                <a
+                href="https://24500lt1.blob.core.windows.net/lecture-recordings/cpsc-24500-2019-01-spring-lt1_2019-02-25.mp4"
+                target="_blank">[link]</a></li> 
+            <li>Git/GitHub Cheat Sheet  
+                <a href="https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf"
+                target="_blank">[link]</a></li> 
+        </ul> 
+</div>
+
+<div id="sprint-08" class="tabcontent">
+  <h3>Sprint 8</h3>
+       <h2>Object-Oriented Programming</h2>
+        <p><strong>Sprint 8: Final Projects and Databases</strong></p>
+        <br>
+
+        <p><b><i>Sprint 8! Need I say more.</i></b></p>
+        <p>With one week left, let's finish strong. I challenge you to make your final project something that makes you proud. Not
+            because it will get you a good grade (which it likely will), but because you find it useful or elegant or beautiful.</p>
+        <p>By the end of this sprint we will be able to:</p>
+        <ul style="list-style-type:square">
+            <li><b><i>Independently</i></b> design, develop, and enhance intermediate level graphical Java applications using 
+                Object-Oriented Programming Concepts, Patterns, and Principles</li>
+            <li>Understand Application Architecture and its relationship to Object-Oriented Programming</li>
+            <li>Understand how relational database do (and don't) support Object-Oriented Programming</li>
+        </ul>
+        <p>In order to do my part if giving you time to build something exceptional, I am removing all non-essential items
+        this week's Activities List. As such, our list includes:</p>
+        <ol>
+            <li><em>Final Project, Final Project, and more Final Project.</em></li>
+            <li>Review DB8... you do not need to post anything this sprint.</li>
+            <li>Complete "Application Architectures, Object-Oriented Programming, and Databases - Part 2"
+                    <a href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/application-architecture-part2.mp4" 
+                    target="_blank">[video]</a> 
+            <li><em>Your Final Project (PA8) and Quiz 8 need to be submitted at least 2 hours before you are scheduled to present 
+                your project.</em></li>
+            <li>You can optionally resubmit PA8 and Quiz 8 a second time prior to noon on Thursday, December 12.</li>
+        </ol> 
+        <p>Feel free to post a note in our discussion board forum or to send me an email you have questions.</p> 
+        <br>
+
+        <p>Additional references:</p>
+        <ul style="list-style-type:square">
+            <li>Sprint 8 recorded Lecture/Discussion session from a previous (2019) online Object-Oriented Programming class
+                    <a href="https://24500lt1.blob.core.windows.net/lecture-recordings/cpsc-24500-2019-01-spring-lt1_2019-02-27.mp4" target="_blank">[link]</a></li> 
+            <li>Git/GitHub Cheat Sheet
+                <a href="https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf" target="_blank">[link]</a></li> 
+        </ul> 
+</div>
+
+<div id="calendar" class="tabcontent">
+  <h3>Calendar</h3>
+  <p id="calendar-id">
+</div>
+
+<div id="credits" class="tabcontent">
+  <h3>Developed by Eric Pogue</h3>
+  <p id="last-updated">
+  <br><br>
+
+  <pre>
+
+
+  The MIT License
+
+  Copyright (c) 2019 Eric Pogue
+
+  Permission is hereby granted, free of charge, 
+  to any person obtaining a copy of this software and 
+  associated documentation files (the "Software"), to 
+  deal in the Software without restriction, including 
+  without limitation the rights to use, copy, modify, 
+  merge, publish, distribute, sublicense, and/or sell 
+  copies of the Software, and to permit persons to whom 
+  the Software is furnished to do so, 
+  subject to the following conditions:
+
+  The above copyright notice and this permission notice 
+  shall be included in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+  OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR 
+  ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  </pre>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+function getCSTDate(dateIn, includeYear, includeTime) {
+  var months = ['January','February','March','April','May','June','July',
+                'August','September','October','November','December'];
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+  var date = new Date(dateIn);
+
+  // CST is UTC -0600 so subtract 6 hours and use UTC values
+  date.setUTCHours(date.getUTCHours() - 6);  
+
+  var dateString = days[date.getUTCDay()] + ', ' +
+        months[date.getUTCMonth()] + ' ' +
+        date.getUTCDate();
+        
+  if (includeYear) {
+    dateString = dateString + ', ' + date.getUTCFullYear();
+  }
+   
+  if (includeTime) {
+    dateString = dateString + ' ' + 
+        ((date.getUTCHours()%12) || 12) + ':' +
+        ('0' + date.getUTCMinutes()).slice(-2) + ' ' +
+        (date.getUTCHours() < 12? 'AM CT':'PM CT');
+  }
+
+  return dateString;
+}
+
+function createCalendar(termID, classID) {
+  // Events must be listed in date order and can only have one event per sprint. Start times should all be 8:00 (8am)
+  // and end times should all be 20:00 (10pm) to minimize chance of daylight savings time and timezone differences. 
+  const eventsSpring2020 = [                                                       
+      {'description':'Martin Luther King Day', 'start':'Mon Jan 20 2020 08:00:00 GMT-0600', 'end':'Mon Jan 20 2020 20:00:00 GMT-0600', 'add':0},
+      {'description':'Spring Break**',         'start':'Mon Mar 09 2020 08:00:00 GMT-0600', 'end':'Fri Mar 13 2020 08:00:00 GMT-0600', 'add':7},
+      {'description':'Easter Holiday',         'start':'Thu Apr 09 2020 08:00:00 GMT-0600', 'end':'Mon Apr 13 2020 08:00:00 GMT-0600', 'add':0},
+      {'description':'Final Exams',            'start':'Mon May 04 2020 08:00:00 GMT-0600', 'end':'Fri May 08 2020 08:00:00 GMT-0600', 'add':0}
+  ]; 
+  let events = eventsSpring2020;
+  let nextEventIndex = 0;
+
+  const classtermSpring2020 = {
+    "sprint1Start":"Mon Jan 13 2020 08:00:00 GMT-0600",
+    "sprint1End":  "Sun Jan 26 2020 23:59:00 GMT-0600",
+    "daysPerSprint":14
+  }
+  const classData = classtermSpring2020;
+
+  let sprintStartDate = new Date(classData.sprint1Start);
+  //console.log("Sprint 1 Start Date (should be Monday 8:00 CT:\n"+sprintStartDate);
+
+  let sprintEndDate = new Date(classData.sprint1End);
+  //console.log("Sprint 1 End Date (should be Sunday 23:59 CT:\n"+sprintEndDate);
+
+  let daysPerSprint = Math.round(sprintEndDate.getUTCDate() - sprintStartDate.getUTCDate());;
+  //console.log("Days Per Sprint (should be 7 or 14):\n"+daysPerSprint);
+
+  let currentDate = new Date();
+  // To test future dates, uncomment following line:
+  // currentDate = new Date("Mon Mar 09 2020 18:00:00 GMT-0600");
+  // console.log("Current Date/Time:\n"+currentDate);  
+
+  var table = "<table>";
+  table = table +"<tr>";
+  table = table +"<th></th>";
+  table = table +"<th>Sprint End</th>";
+  table = table +'<th style="text-align:center">Duration</th>';
+  table = table +"<th>Notes</th>";
+  table = table +"</tr>";
+  for (i=0; i<8; i++) {
+    console.log("End Date UTCDate():\n"+sprintEndDate);
+    if (i!=0) {
+      sprintStartDate.setUTCDate(sprintStartDate.getUTCDate() + daysPerSprint);
+      sprintEndDate.setUTCDate(sprintEndDate.getUTCDate() + daysPerSprint);
+    }
+
+    console.log("Start Date UTCDate():\n"+sprintStartDate);  
+    console.log("End Date UTCDate():\n"+sprintEndDate);  
+    console.log("Current Date UTCDate():\n"+currentDate); 
+    var highlightRow = false;
+    if ((currentDate > sprintStartDate)&&(currentDate < sprintEndDate)) {
+      highlightRow = true;
+    }
+
+    var currentNote = "";
+    var nextEventDate = new Date(events[nextEventIndex].start);
+
+    let duration = daysPerSprint;
+    if (nextEventDate < sprintEndDate) {
+      currentNote = events[nextEventIndex].description;
+
+      if (events[nextEventIndex].add > 0) {
+        sprintEndDate.setUTCDate(sprintEndDate.getUTCDate() + events[nextEventIndex].add);
+        duration += events[nextEventIndex].add;
+      }
+        
+      nextEventIndex++;
+    }
+
+    let endDate = getCSTDate(sprintEndDate, true, true);
+    if (i!=0) {
+      endDate = getCSTDate(sprintEndDate, true, true);
+    }
+
+    if (highlightRow) {
+      table = table +'<tr style="background-color:#adebdb">';
+      table = table + '<td><em>Sprint '+(i+1)+'</em></td><td><em>'+endDate+'</em></td><td style="text-align:center"><em>'+
+        duration+' days</em></td><td><em>'+currentNote+'</em></td>';
+
+    } else {
+      table = table +"<tr>";
+      table = table + '<td>Sprint '+(i+1)+'</td><td>'+endDate+'</td><td style="text-align:center">'+
+        duration+' days</td><td>'+currentNote+'</td>';
+    }
+    table = table +"</tr>";      
+  }
+
+  return table
+}
+
+var x = document.lastModified;
+document.getElementById("last-updated").innerHTML = "Last Update: "+x;
+
+// Get the element with id="defaultOpen" and click on it
+//document.getElementById("defaultOpen").click();
+
+// Parse URL for input parameters
+var vars = {};
+var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+  vars[key] = value;
+});
+
+// Get the term (ie. "2020s" for sprint term 2020)from the URL.
+let termID = "";
+if (typeof vars["term-id"] !== 'undefined') {
+  term = vars["term-id"];
+}
+
+// Get the class identifier (ie. "lt1" for cpsc-24500-lt1).
+let classID = "";
+if (typeof vars["class-id"] !== 'undefined') {
+  term = vars["class-id"];
+}
+
+// If In order for the calendar to be created we need the class start date and the length of each 
+// sprint. This should be included on the 
+document.getElementById("calendar-id").innerHTML = createCalendar(termID, classID);
+
+// Set default tab.
+document.getElementById("idCalendar").click(); 
+</script>
 </body>
-</html>
