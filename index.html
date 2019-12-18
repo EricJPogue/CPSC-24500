@@ -272,9 +272,8 @@ table th {
 </div>
 
 <div id="sprint-03" class="tabcontent">
-  <h3>Sprint 3</h3>
-        <h2>Object-Oriented Programming</h2>
-        <p><strong>Sprint 3: Graphical User Interfaces and FaceDraw</strong></p>
+  <h3>Object-Oriented Programming</h3>
+  <h3>Sprint 3: Graphical User Interfaces and FaceDraw</h3>
         <br>
 
         <p><b><i>Welcome to Sprint 3.</i></b> We have covered a lot in the first two sprints. Much of it was preparing
@@ -326,9 +325,8 @@ table th {
 </div>
 
 <div id="sprint-04" class="tabcontent">
-  <h3>Sprint 4</h3>
-        <h2>Object-Oriented Programming</h2>
-        <p><strong>Sprint 4: Interactive User Interfaces and Mosaic</strong></p>
+  <h3>Object-Oriented Programming</h3>
+  <h3>Sprint 4: Interactive User Interfaces and Mosaic</h3>
         <br>
 
         <p><b><i>Welcome to sprint 4.</i></b> We have covered a lot of material in the first three sprints. I suspect
@@ -392,9 +390,8 @@ table th {
 </div>
 
 <div id="sprint-05" class="tabcontent">
-  <h3>Sprint 5</h3>
-        <h2>Object-Oriented Programming</h2>
-        <p><strong>Sprint 5: Network Programming and The Cloud</strong></p>
+  <h3>Object-Oriented Programming</h3>
+  <h3>Sprint 5: Network Programming and The Cloud</h3>
         <br>
 
         <p>Wow! Sprint 5. How did that come so fast? I must say that I am impressed. This is a challenging class and
@@ -489,9 +486,8 @@ table th {
 </div>
 
 <div id="sprint-06" class="tabcontent">
-  <h3>Sprint 6</h3>
-        <h2>Object-Oriented Programming</h2>
-        <p><em>Sprint 6: Multithreading and Application Programming Interfaces</em></p>
+  <h3>Object-Oriented Programming</h3>
+  <h3>Sprint 6: Multithreading and Application Programming Interfaces</h3>
         <br>
         <p>Sprint 6! This sprint offers a mix of the old and the new. Some things like hosting JSON files on our Azure
         websites and enhancing our SwissArmyKnife application will be additions to what we have already learned. On the
@@ -550,9 +546,8 @@ table th {
 </div>
 
 <div id="sprint-07" class="tabcontent">
-  <h3>Sprint 7</h3>
-        <h2>Object-Oriented Programming</h2>
-        <p><em>Sprint 7: Model-View-Controller and Application Architecture</em></p>
+  <h3>Object-Oriented Programming</h3>
+  <h3>Sprint 7: Model-View-Controller and Application Architecture</h3>
         <br>
         <p><em>Welcome to sprint 7.</em> How time flies. We have two separate programming assignment this sprint. The
         first assignment (PA7) is Thunderbird. We will be completing the Thunderbird application by the middle of the
@@ -600,13 +595,11 @@ table th {
 </div>
 
 <div id="sprint-08" class="tabcontent">
-  <h3>Sprint 8</h3>
-       <h2>Object-Oriented Programming</h2>
-        <p><strong>Sprint 8: Final Projects and Databases</strong></p>
+  <h3>Object-Oriented Programming</h3>
+  <h3>Sprint 8: Final Projects and Databases</h3>
         <br>
 
-        <p><b><i>Sprint 8! Need I say more.</i></b></p>
-        <p>With one week left, let's finish strong. I challenge you to make your final project something that makes you proud. Not
+        <p><b><i>Sprint 8! Need I say more.</i></b>With one week left, let's finish strong. I challenge you to make your final project something that makes you proud. Not
             because it will get you a good grade (which it likely will), but because you find it useful or elegant or beautiful.</p>
         <p>By the end of this sprint we will be able to:</p>
         <ul style="list-style-type:square">
@@ -762,15 +755,15 @@ function createCalendar(termID, classID) {
   table = table +"<th>Notes</th>";
   table = table +"</tr>";
   for (i=0; i<8; i++) {
-    console.log("End Date UTCDate():\n"+sprintEndDate);
     if (i!=0) {
       sprintStartDate.setUTCDate(sprintStartDate.getUTCDate() + daysPerSprint);
       sprintEndDate.setUTCDate(sprintEndDate.getUTCDate() + daysPerSprint);
     }
 
-    console.log("Start Date UTCDate():\n"+sprintStartDate);  
-    console.log("End Date UTCDate():\n"+sprintEndDate);  
-    console.log("Current Date UTCDate():\n"+currentDate); 
+    // Debug code:
+    // console.log("Start Date UTCDate():\n"+sprintStartDate);  
+    // console.log("End Date UTCDate():\n"+sprintEndDate);  
+    // console.log("Current Date UTCDate():\n"+currentDate); 
     var highlightRow = false;
     if ((currentDate > sprintStartDate)&&(currentDate < sprintEndDate)) {
       highlightRow = true;
@@ -824,7 +817,7 @@ var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,k
   vars[key] = value;
 });
 
-// Get the term (ie. "2020s" for sprint term 2020)from the URL.
+// Get the term (ie. "2020s" for spring term 2020)from the URL.
 let termID = "";
 if (typeof vars["term-id"] !== 'undefined') {
   term = vars["term-id"];
@@ -841,6 +834,50 @@ if (typeof vars["class-id"] !== 'undefined') {
 document.getElementById("calendar-id").innerHTML = createCalendar(termID, classID);
 
 // Set default tab.
-document.getElementById("idCalendar").click(); 
+// Get the class identifier (ie. "1" for sprint 1).
+let sprint = 0;
+let sprintID = "";
+if (typeof vars["sprint-id"] !== 'undefined') {
+  sprintID = vars["sprint-id"];
+  sprint = parseInt(sprintID, 10);
+}
+
+switch(sprint) {
+  case 1:
+    document.getElementById("idSprint1").click(); 
+  break;
+
+  case 2:
+    document.getElementById("idSprint2").click(); 
+  break;
+
+  case 3:
+    document.getElementById("idSprint3").click(); 
+  break;
+
+  case 4:
+    document.getElementById("idSprint4").click(); 
+  break;
+
+  case 5:
+    document.getElementById("idSprint5").click(); 
+  break;
+
+  case 6:
+    document.getElementById("idSprint6").click(); 
+  break;
+    
+  case 7:
+    document.getElementById("idSprint7").click(); 
+  break;
+
+  case 8:
+    document.getElementById("idSprint8").click(); 
+  break;
+    
+  default:
+    document.getElementById("idCalendar").click(); 
+} 
+
 </script>
 </body>
