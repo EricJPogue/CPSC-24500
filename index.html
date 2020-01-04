@@ -835,9 +835,10 @@ if (typeof vars["term-id"] !== 'undefined') {
 
 // Get the class identifier (ie. "lt" for accelerated classes).
 let classID = "";
+
+console.log(vars["classtype-id"])
 if (typeof vars["classtype-id"] !== 'undefined') {
-  classID = vars["classype-id"];
-  console.log("classID="+classID);
+  classID = vars["classtype-id"];
 }
 
 // If In order for the calendar to be created we need the class start date and the length of each 
