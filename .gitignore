@@ -27,3 +27,6 @@ hs_err_pid*
 
 # Archive folder
 archive
+
+# Private files
+class-notes.xlsx
