@@ -30,3 +30,6 @@ archive
 
 # Private files
 class-notes.xlsx
+
+# Videos and PowerPoint slides with Audio/Video (big files)
+videos/
