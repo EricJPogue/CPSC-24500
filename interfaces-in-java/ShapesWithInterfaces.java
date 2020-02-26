@@ -1,26 +1,21 @@
 /*
-    An interface is 100% abstract class and has only abstract methods.
-    Class can implement any number of interfaces.
-
-    abstract public double CalcArea();
-    abstract public double CalcPerimeter();
+    Shapes with Interfaces demonstrate Classes, Objects, 
+	Encapsulation, Inheritance, Polymorphism, and Interfaces 
+	utilizing Shapes. 
 */
 
-//**************************************
-//************************************************
-//**********************************************************
-
-// Interfaces
+// Interface
 interface ShapeInterface {
     public double CalculateArea();
     public double CalculatePerimeter();
 
-    // Todo: Add other useful Shape related methods like Draw().
+    // Todo: Add other useful Shape related 
+	// methods like Paint() or Resize().  
 }
 
 // Class
 class Shape {
-	protected int width; // Attributes or Member Veriables
+	protected int width; // Attributes or Member Variables
     protected int height;
 
     // Constructors
@@ -33,6 +28,10 @@ class Shape {
     public String toString()  {
         return "W=" + width + " H=" + height;
     }
+ 
+	// Alternatively Abstraction could be implemented with:
+	//   abstract public double CalculateArea();
+    //   abstract public double CalculatePerimeter();
 }
 
 class Rectangle extends Shape implements ShapeInterface {
@@ -51,13 +50,13 @@ class Rectangle extends Shape implements ShapeInterface {
 
 class Square extends Rectangle implements ShapeInterface {
     public Square(int widthIn) {
-        super(widthIn, widthIn /* height = width for a square */);
+        super(widthIn, widthIn /* width & height are equal for a square */);
     }
 }
 
 class Circle extends Shape implements ShapeInterface {
-    public Circle(int widthIn, int heightIn) {
-        super(widthIn, heightIn);
+    public Circle(int widthIn) {
+        super(widthIn, widthIn /* width & height are equal for a circle */);
     }
 
     public double CalculateArea() {
@@ -75,32 +74,53 @@ class Circle extends Shape implements ShapeInterface {
 
 public class ShapesWithInterfaces {
 	public static void main(String[] args) {
-        System.out.println();
-         
-        // Objects
+
+        // Shape
         Shape myShape = new Shape(100, 100);
-        System.out.println("Shape: " + myShape);   
-		System.out.println();        
+        System.out.println("\nShape: " + myShape + "\n");   
 
-		Rectangle myRectangle  = new Rectangle(100, 100);
-        System.out.println("Rectangle: " + myRectangle);
-        System.out.printf("Rectangle Area: %.2f", myRectangle.CalculateArea());
-		System.out.println();        
+		// Rectangle 
+		Rectangle myRectangle  = new Rectangle(100, 200);
 
+        System.out.println("Rectangle:" + myRectangle);
+        System.out.printf("Area=%.2f\n", myRectangle.CalculateArea());
+        System.out.printf("Perimeter=%.2f\n\n", 
+			myRectangle.CalculatePerimeter());
 
-		Circle myCircle = new Circle(100, 100);
-        System.out.println("Circle: " + myCircle);
-        System.out.printf("Circle Area: %.2f\n", myCircle.CalculateArea());
-        System.out.println();        
+		// Circle
+		Circle myCircle = new Circle(50);
 
+        System.out.println("Circle:" + myCircle);
+        System.out.printf("Area=%.2f\n", myCircle.CalculateArea());
+        System.out.printf("Perimeter=%.2f\n\n", 
+			myCircle.CalculatePerimeter());
 
-        Shape myTestShape = new Circle(100, 100);
+		// Circle assigned to a Shape typecast to a ShapeInterface
+        Shape myS = new Circle(35);
+        ShapeInterface myShapeInterface = (ShapeInterface) myS;
 
-        ShapeInterface myShapeInterface = (ShapeInterface) myTestShape;
-        System.out.printf("ShapeInterface Area: %.2f\n", myShapeInterface.CalculateArea());
+        System.out.println("Circle(35) assigned to a Shape:");
+        System.out.printf("Area=%.2f\n", myShapeInterface.CalculateArea());
+        System.out.printf("Perimeter=%.2f\n\n", 
+			myShapeInterface.CalculatePerimeter());
 
+		// Array of Shapes polymorphically assigned Circles, Rectangles,
+		// and Squares 
+		System.out.println("Polymorphic Array:");
+		Shape[] shapes = new Shape[4];
+		shapes[0] = new Circle(75);
+		shapes[1] = new Rectangle(100,200);
+		shapes[2] = new Square(50);
+		shapes[3] = new Rectangle(50,25);
 
+		for (Shape s : shapes) {
+			ShapeInterface mySI = (ShapeInterface)s;
 
+			System.out.println(s.getClass());
+        	System.out.printf("Area=%.2f\n", mySI.CalculateArea());
+        	System.out.printf("Perimeter=%.2f\n\n", 
+				mySI.CalculatePerimeter());
+		}
 	}
 }
 
