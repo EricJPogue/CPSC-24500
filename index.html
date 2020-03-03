@@ -590,7 +590,7 @@ table th {
 
 <div id="sprint-08" class="tabcontent">
 	<h3>Object-Oriented Programming</h3>
-	<h3>Sprint 8: Final Project and Databases</h3>
+	<h3>Sprint 8: Final Project, Application Architecture, and Databases</h3>
 
 	<p>Sprint 8! Need I say more. With one sprint left, let's finish strong. My challenge to you is to make your final
 	project something that makes you proud. Not because it will get you a good grade (which it likely will), but because
@@ -607,13 +607,12 @@ table th {
 	this week's Activities List. As such, our list includes:</p>
 	<ol>
 		<li><em>Final Project, Final Project, and more Final Project</em></li>
-		<li>Review DB8... you do not need to post anything this sprint</li>
+		<li>Review Programming Assignment 8 Final Project v2, Quiz 8, and Discussion Board 8</li>
 		<li>Complete "Application Architectures, Object-Oriented Programming, and Databases - Part 2"
 			<a href="https://mediaatoz.blob.core.windows.net/object-oriented-programming/application-architecture-part2.mp4" 
-			target="_blank">[video]</a>
-		<li style="color:red"><em>Your Final Project (PA8) and Quiz 8 need to be submitted at least 2 hours before you are scheduled to present 
-			your project.\</em></li>
-		<li>You can optionally resubmit PA8 and Quiz 8 a second time prior to the end of the sprint</li>
+			target="_blank">[video]</a></li>
+		<li style="color:red">All course assignments including Programming Assignment 8 Final Project and Quiz 8 must be
+			submitted by Thursday (March 5th) at 11:59pm CT</li>
 	</ol>
 	<p>Feel free to post a note in our class forum or to send me an email you have questions.</p><br>
 	<p>Additional references:</p>
@@ -757,8 +756,12 @@ function createCalendar(termID, classID) {
 	table = table +'<th style="text-align:center">Duration</th>';
 	table = table +"<th>Notes</th>";
 	table = table +"</tr>";
+	
 	for (i=0; i<8; i++) {
 		if (i!=0) {
+			// BugBug
+			if (i==7) daysPerSprint = daysPerSprint - 3;
+
 			sprintStartDate.setUTCDate(sprintStartDate.getUTCDate() + daysPerSprint);
 			sprintEndDate.setUTCDate(sprintEndDate.getUTCDate() + daysPerSprint);
 		}
@@ -771,6 +774,10 @@ function createCalendar(termID, classID) {
 		if ((currentDate > sprintStartDate)&&(currentDate < sprintEndDate)) {
 			highlightRow = true;
 		}
+
+		// BugBug
+		highlightRow = false;
+		if (i==7) highlightRow = true;
 
 		var currentNote = "";
 		var nextEventDate = new Date(events[nextEventIndex].start);
@@ -788,12 +795,18 @@ function createCalendar(termID, classID) {
 		}
 
 		let endDate = getCSTDate(sprintEndDate, true, true);
+
 		if (i!=0) {
 			endDate = getCSTDate(sprintEndDate, true, true);
+
 		}
 
 		if (highlightRow) {
 			table = table +'<tr style="background-color:#adebdb">';
+
+			// BugBug
+			if (i==7) duration = duration + 1;
+
 			table = table + '<td><em>Sprint '+(i+1)+'</em></td><td><em>'+endDate+'</em></td><td style="text-align:center"><em>'+
 				duration+' days</em></td><td><em>'+currentNote+'</em></td>';
 
